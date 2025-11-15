@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WP1 - Student Fun Zone</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-left">
+            <img src="assets/logo.png" class="logo" alt="IPI Logo">
+            <div class="title">Internacionalna poslovno-informaciona akademija Tuzla</div>
+        </div>
+
+        <nav class="nav">
+    <ul class="menu">
+        <li>
+            <a id="nav-home" class="nav-item" data-page="welcome">
+                🏠 Početna
+            </a>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-btn">
+                🎓 Student Fun Zone ▾
+            </a>
+
+            <ul class="dropdown-menu">
+                <li><a class="page-link" data-page="whiteboard">📝 Whiteboard</a></li>
+                <li><a class="page-link" data-page="visual">📊 Visual Board</a></li>
+                <li><a class="page-link" data-page="kanban">📌 Kanban Board</a></li>
+                <li><a class="page-link" data-page="bingo">🎯 Bingo</a></li>
+                <li><a class="page-link" data-page="kviz">❓ Kviz</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a id="nav-contact" class="nav-item" data-page="contact">
+                📞 Kontakt
+            </a>
+        </li>
+
+    </ul>
+</nav>
+    </header>
+
+
+    <!-- MAIN CONTENT (IFRAME) -->
+    <main class="content-container">
+        <iframe id="mainFrame"></iframe>
+        <!-- ERROR PANEL -->
+        <div id="errorPanel" class="error-panel hidden">
+            <h2>⚠ Page Not Available</h2>
+            <p>Stranica koju pokušavate učitati trenutno nije dostupna.</p>
+        </div>
+    </main>
+
+ <footer class="footer">
+     <div class="footer-left">
+        © <span id="year"></span> Internacionalna poslovno-informaciona akademija Tuzla
+    </div>
+
+      <div class="footer-center" id="date"></div>
+
+    <div class="footer-right" id="clock"></div>
+</footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

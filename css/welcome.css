@@ -1,0 +1,112 @@
+.welcome-header {
+    padding: 40px;
+    text-align: center;
+    font-size: 22px;
+    background: linear-gradient(120deg, #0b428c, #143f6b, #0b428c);
+    background-size: 200% 200%;
+    color: white;
+    animation:
+        blueGlow 6s ease-in-out infinite,
+        textPulse 3.5s ease-in-out infinite;
+    overflow: hidden;
+}
+
+.welcome-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 20px;
+    flex-wrap: wrap; 
+}
+
+.card {
+    background: white;
+    color: #0b428c;
+    padding: 20px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    width: 180px;
+    height: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.card .icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+    background: #e8f1ff;
+}
+
+.card {
+    animation: fadeInCards 0.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInCards {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+@keyframes blueGlow {
+    0% {
+        background-position: 0% 50%;
+        box-shadow:
+            0 0 8px rgba(0, 70, 150, 0.25),
+            inset 0 0 8px rgba(0, 70, 150, 0.18);
+    }
+    50% {
+        background-position: 100% 50%;
+        box-shadow:
+            0 0 16px rgba(0, 120, 255, 0.45),
+            inset 0 0 16px rgba(0, 120, 255, 0.28);
+    }
+    100% {
+        background-position: 0% 50%;
+        box-shadow:
+            0 0 8px rgba(0, 70, 150, 0.25),
+            inset 0 0 8px rgba(0, 70, 150, 0.18);
+    }
+}
+
+@keyframes textPulse {
+    0% {
+        transform: scale(1);
+        text-shadow:
+            0 0 6px rgba(0, 150, 255, 0.6),
+            0 0 12px rgba(0, 120, 240, 0.4);
+    }
+    50% {
+        transform: scale(1.015);
+        text-shadow:
+            0 0 10px rgba(0, 180, 255, 0.85),
+            0 0 18px rgba(0, 150, 255, 0.65);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow:
+            0 0 6px rgba(0, 150, 255, 0.6),
+            0 0 12px rgba(0, 120, 240, 0.4);
+    }
+}
