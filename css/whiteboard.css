@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    background: #f3f4f7;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.toolbar {
+    background: #0b428c;
+    color: white;
+    padding: 12px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.toolbar button {
+    background: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #0b428c;
+    transition: .2s;
+}
+
+.toolbar button:hover {
+    background: #e3e9f7;
+}
+
+.tool.active {
+    background: #ffd000 !important;
+}
+
+.group label {
+    margin-right: 5px;
+}
+
+input[type=color] {
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: white;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel {
+    background: #999 !important;
+    color: white !important;
+}
