@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    background: #f3f4f7;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.toolbar {
+    background: #0b428c;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 4px solid rgba(0,0,0,0.15);
+}
+
+.tool {
+    background: white;
+    color: #0b428c;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    min-width: 140px;
+    text-align: center;
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.tool:hover {
+    background: #e2ebff;
+}
+
+.danger {
+    background: #ffdddd;
+    color: #a10000;
+}
+
+.upload-btn input {
+    display: none;
+}
+
+.board {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: url("../assets/pluto.png") center/cover;
+    position: relative;
+}
+
+.note {
+    position: absolute;
+    background: #fff9b1;
+    min-width: 170px;
+    min-height: 110px;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    cursor: move;
+}
+
+.note textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    resize: none;
+}
+
+.quote { background: #dfeaff; }
+
+.board-img {
+    position: absolute;
+    max-width: 250px;
+    border-radius: 6px;
+    cursor: move;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
+/* MODALS */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    width: 360px;
+    border-radius: 8px;
+}
+
+.modal-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.separator {
+    width: 2px;
+    height: 36px;
+    background: rgba(255,255,255,0.55);
+    margin: 0 14px;
+    border-radius: 2px;
+}
+
+
+.cancel { background: #ccc; }
+
+.notify {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0b428c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s;
+}
+
+.notify.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none !important;
+}
