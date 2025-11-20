@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    background: #f3f4f7;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.title {
+    text-align: center;
+    color: #0b428c;
+    font-size: 42px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    letter-spacing: 10px;
+}
+
+.bingo-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+
+.toolbar {
+    background: #0b428c;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    border-bottom: 4px solid rgba(0,0,0,0.15);
+}
+
+.tool {
+    background: white;
+    color: #0b428c;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    min-width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    transition: 0.25s;
+}
+
+.tool:hover {
+    background: #e8f0ff;
+}
+
+
+.bingo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.bingo-table td {
+    border: 2px solid #d9d9d9;
+    padding: 18px;
+    height: 110px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: 0.2s ease;
+    user-select: none;
+    position: relative;
+}
+
+.bingo-table td:hover {
+    background: #eef4ff;
+    transform: scale(1.03);
+}
+
+.cell.checked {
+    background: #c9ffcd !important;
+    box-shadow: inset 0 0 10px rgba(0, 100, 0, 0.5);
+}
+
+.cell.crossed {
+    background: #ffd4d4 !important;
+    box-shadow: inset 0 0 10px rgba(100, 0, 0, 0.5);
+}
+
+.mark {
+    font-size: 38px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    opacity: 0.85;
+}
+
+.free {
+    background: #fff6c4 !important;
+    font-weight: 700;
+    border: 3px solid #0b428c !important;
+}
+
+
+.rules {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    width: 360px;
+    border-radius: 8px;
+}
+
+.modal-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #0b428c;
+    color: white;
+    font-weight: 600;
+}
+
+.cancel {
+    background: #666 !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.notify {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0b428c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s;
+}
+
+.notify.show {
+    opacity: 1;
+    transform: translateY(0);
+}
