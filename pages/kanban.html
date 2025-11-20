@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <title>Kanban Board</title>
+
+    <link rel="stylesheet" href="../css/kanban.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="toolbar">
+
+    <button class="tool" id="btnAdd"><i class="fa-solid fa-plus"></i> Novi zadatak</button>
+
+    <div class="separator"></div>
+
+    <button class="tool" id="btnSave"><i class="fa-solid fa-floppy-disk"></i> Sačuvaj</button>
+    <button class="tool" id="btnLoad"><i class="fa-solid fa-folder-open"></i> Učitaj</button>
+    <button class="tool danger" id="btnClear"><i class="fa-solid fa-xmark"></i> Očisti sve</button>
+
+    <div class="separator"></div>
+
+    <button class="tool" id="btnMail"><i class="fa-solid fa-envelope"></i> Mail</button>
+    <button class="tool" id="btnPDF"><i class="fa-solid fa-file-pdf"></i> PDF</button>
+    <button class="tool" id="btnPNG"><i class="fa-solid fa-image"></i> PNG</button>
+    <button class="tool" id="btnPrint"><i class="fa-solid fa-print"></i> Print</button>
+
+</div>
+
+<div id="kanbanBoard" class="board">
+
+    <div class="column" data-col="todo">
+        <h2>
+            <i class="fa-regular fa-square" style="margin-right:6px;"></i>
+            To Do
+        </h2>
+        <div class="col-content"></div>
+    </div>
+
+    <div class="column" data-col="progress">
+        <h2>
+            <i class="fa-solid fa-spinner fa-spin" style="margin-right:6px;"></i>
+            In Progress
+        </h2>
+        <div class="col-content"></div>
+    </div>
+
+    <div class="column" data-col="done">
+        <h2>
+            <i class="fa-solid fa-square-check" style="margin-right:6px;"></i>
+            Done
+        </h2>
+        <div class="col-content"></div>
+    </div>
+
+</div>
+
+
+<div id="taskModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Novi zadatak</h2>
+
+        <label>Naziv zadatka:</label>
+        <input type="text" id="taskName">
+
+        <label>Opis:</label>
+        <textarea id="taskDesc"  class="modal-textarea"></textarea>
+
+        <div class="modal-buttons">
+            <button id="taskAddConfirm">Dodaj</button>
+            <button class="cancel" id="taskAddCancel">Poništi</button>
+        </div>
+    </div>
+</div>
+
+<div id="loadModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Učitaj board</h2>
+
+        <select id="loadSelect"></select>
+
+        <div class="modal-buttons">
+            <button id="loadConfirm">Učitaj</button>
+            <button class="cancel" id="loadCancel">Poništi</button>
+        </div>
+    </div>
+</div>
+
+<div id="emailModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Pošalji e-mailom</h2>
+
+        <label>Email:</label>
+        <input type="email" id="emailField">
+
+        <div class="modal-buttons">
+            <button id="emailNext">Dalje</button>
+            <button class="cancel" id="emailCancel">Poništi</button>
+        </div>
+    </div>
+</div>
+
+<div id="confirmModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Potvrda</h2>
+        <p>Da li želite poslati board?</p>
+
+        <div class="modal-buttons">
+            <button id="confirmSend">Pošalji</button>
+            <button class="cancel" id="confirmCancel">Ne</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="notify" class="notify hidden"></div>
+
+<script src="../js/kanban.js"></script>
+</body>
+</html>

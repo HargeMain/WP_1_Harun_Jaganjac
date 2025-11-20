@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    background: #f3f4f7;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.toolbar {
+    background: #0b428c;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.tool {
+    background: white;
+    color: #0b428c;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    min-width: 140px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.tool:hover { background: #e6efff; }
+
+.danger { background: #ffe1e1; color: #a30000; }
+
+.separator {
+    width: 2px;
+    height: 36px;
+    background: white;
+    opacity: 0.5;
+    margin: 0 10px;
+}
+
+.board {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: calc(100vh - 80px);
+}
+
+.column {
+    background: #ffffff;
+    flex: 1;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.column h2 {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.col-content {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.task {
+    background: #fff9b1;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: grab;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.task strong { font-size: 16px; }
+
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    width: 360px;
+    border-radius: 8px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.modal-buttons button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content textarea,
+.modal-textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical; 
+    padding: 10px;
+    font-size: 15px;
+
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background: #f9f9f9;
+
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+.cancel { background: #ccc; }
+
+.notify {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 12px 20px;
+    background: #0b428c;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s;
+}
+
+.notify.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden { display: none !important; }
