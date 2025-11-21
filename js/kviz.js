@@ -1,3 +1,5 @@
+// 2025 © Harun Jaganjac
+
 document.getElementById("checkBtn").onclick = checkAnswers;
 document.getElementById("scoreRetry").onclick = resetQuiz;
 

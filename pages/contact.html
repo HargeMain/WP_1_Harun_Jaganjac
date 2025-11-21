@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt – IPI Akademija</title>
+
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="contact-container">
+
+    <h1 class="title"><i class="fa-solid fa-envelope-open-text"></i> Kontaktirajte nas</h1>
+    <p class="subtitle">
+        Ispunite formu ispod i javit ćemo vam se što prije.
+    </p>
+
+    <form id="contactForm">
+
+        <div class="form-group">
+            <label><i class="fa-solid fa-user"></i> Ime i prezime</label>
+            <input type="text" id="fullName" required>
+        </div>
+
+        <div class="form-group">
+            <label><i class="fa-solid fa-at"></i> Email adresa</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label><i class="fa-solid fa-phone"></i> Broj telefona</label>
+            <input type="text" id="phone">
+        </div>
+
+        <div class="form-group">
+            <label><i class="fa-solid fa-comment-dots"></i> Vaša poruka</label>
+            <textarea id="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" id="sendBtn">
+            <i class="fa-solid fa-paper-plane"></i> Pošalji poruku
+        </button>
+
+    </form>
+
+    <div id="notify" class="notify hidden"></div>
+
+</div>
+
+<script src="../js/contact.js"></script>
+
+</body>
+</html>

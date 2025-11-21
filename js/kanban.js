@@ -1,3 +1,5 @@
+// 2025 © Harun Jaganjac
+
 const board = document.getElementById("kanbanBoard");
 const notify = document.getElementById("notify");
 

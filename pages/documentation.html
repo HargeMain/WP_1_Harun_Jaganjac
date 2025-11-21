@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <title>Dokumentacija – Student Fun Zone</title>
+    <link rel="stylesheet" href="../css/documentation.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <h1><i class="fa-solid fa-book"></i> Projektna Dokumentacija – Student Fun Zone</h1>
+    <p>Internacionalna poslovno-informaciona akademija Tuzla • Web Programiranje</p>
+   <div class="docs-toolbar">
+    <button id="downloadPdf">
+        <i class="fa-solid fa-file-pdf"></i> Preuzmi PDF
+    </button>
+   </div>
+</header>
+
+<div class="container">
+
+    <section class="toc">
+        <h2>Sadržaj</h2>
+
+        <ul>
+            <li><a href="#whiteboard">1. Whiteboard</a></li>
+            <li><a href="#visual">2. Visual Board</a></li>
+            <li><a href="#kanban">3. Kanban Board</a></li>
+            <li><a href="#bingo">4. Bingo</a></li>
+            <li><a href="#kviz">5. Kviz</a></li>
+            <li><a href="#contact">6. Kontakt stranica</a></li>
+            <li><a href="#app">7. Glavna aplikacija</a></li>
+        </ul>
+    </section>
+
+    <section id="whiteboard" class="section">
+        <h2>1. Whiteboard</h2>
+
+        <p>Whiteboard omogućava korisniku slobodno crtanje, brisanje, promjenu boje, promjenu debljine linije i eksport sadržaja.</p>
+
+        <h3>Feature-i:</h3>
+        <ul>
+            <li>Crtanje olovkom</li>
+            <li>Gumica</li>
+            <li>Promjena boje</li>
+            <li>Debljina linije</li>
+            <li>Brisanje cijelog boarda</li>
+            <li>Snimi kao PNG</li>
+            <li>Snimi kao PDF</li>
+            <li>Mail slanje (mailto)</li>
+            <li>Print funkcija</li>
+        </ul>
+
+        <div class="img-box">
+            <img src="/assets/whiteboard.png" alt="">
+        </div>
+    </section>
+
+    <section id="visual" class="section">
+        <h2>2. Visual Board</h2>
+
+        <p>Interaktivna vizualna tabla na kojoj se dodaju bilješke, citati i slike. Sve se može pomicati, spremati i učitavati.</p>
+
+        <h3>Feature-i:</h3>
+        <ul>
+            <li>Dodavanje bilješki</li>
+            <li>Dodavanje citata</li>
+            <li>Dodavanje slika</li>
+            <li>Drag & drop za sve elemente</li>
+            <li>Spremanje u localStorage</li>
+            <li>Učitavanje prethodnih verzija</li>
+            <li>PDF eksport</li>
+            <li>Mail slanje</li>
+        </ul>
+
+        <div class="img-box">
+            <img src="/assets/visual_board.png" alt="">
+        </div>
+    </section>
+
+    <section id="kanban" class="section">
+        <h2>3. Kanban Board</h2>
+
+        <p>Tri kolone (To Do, In Progress, Done) sa zadacima koji se mogu dodavati, premještati i spremati.</p>
+
+        <h3>Feature-i:</h3>
+        <ul>
+            <li>Dodavanje zadataka</li>
+            <li>Modal forma za unos</li>
+            <li>Drag & drop između kolona</li>
+            <li>Spremanje u localStorage</li>
+            <li>Učitavanje</li>
+            <li>Mail</li>
+            <li>PDF / PNG eksport</li>
+            <li>Print</li>
+        </ul>
+
+        <div class="img-box">
+            <img src="/assets/kanban.png" alt="">
+        </div>
+    </section>
+
+    <section id="bingo" class="section">
+        <h2>4. Bingo</h2>
+
+        <p>Interaktivna Bingo tabla koja omogućava klik na svaku ćeliju, promjenu boje i vizuelni prikaz ✔ / ❌.</p>
+
+        <h3>Feature-i:</h3>
+        <ul>
+            <li>Interaktivne ćelije</li>
+            <li>Tri stanja (normalno, ✔, ❌)</li>
+            <li>Moderni UI stil</li>
+            <li>Animacije</li>
+            <li>PDF i mail funkcionalnost</li>
+        </ul>
+
+        <div class="img-box">
+            <img src="/assets/bingo.png" alt="">
+        </div>
+    </section>
+
+    <section id="kviz" class="section">
+        <h2>5. Kviz</h2>
+
+        <p>Kviz sa 5 pitanja, provjera tačnih odgovora i specijalni modal prikaza rezultata.</p>
+
+        <h3>Feature-i:</h3>
+        <ul>
+            <li>Radio i checkbox pitanja</li>
+            <li>Automatsko računanje rezultata</li>
+            <li>Rezultat modal (blur efekat)</li>
+            <li>Smiley prema rezultatu</li>
+            <li>Restart kviza</li>
+            <li>Spremanje skorova u localStorage</li>
+        </ul>
+
+        <div class="img-box">
+            <img src="/assets/quiz.png" alt="">
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>6. Kontakt stranica</h2>
+
+        <p>Kontakt forma sa validacijom i mailto slanjem.</p>
+
+        <h3>Feature-i:</h3>
+        <ul>
+            <li>Validacija svih polja</li>
+            <li>Vizuelno označavanje errora</li>
+            <li>Mail slanje</li>
+        </ul>
+
+        <div class="img-box">
+            <img src="/assets/contact.png" alt="">
+        </div>
+    </section>
+
+    <section id="app" class="section">
+        <h2>7. Glavna aplikacija </h2>
+
+        <p>Aplikacija ima header, navigaciju, glavni sadržaj u iframe-u i footer.</p>
+
+        <h3>Feature-i:</h3>
+        <ul>
+            <li>Dynamic iframe loading</li>
+            <li>Error Panel</li>
+            <li>Aktivni meni highlight</li>
+            <li>Dropdown sa Student Fun Zone sadržajem</li>
+            <li>Sat, datum, footer</li>
+        </ul>
+
+        <div class="img-box">
+            <img src="/assets/main.png" alt="">
+        </div>
+    </section>
+
+</div>
+
+<script src="../js/documentation.js"></script>
+
+</body>
+</html>

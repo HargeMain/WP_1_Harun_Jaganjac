@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f3f4f7;
+}
+
+.header {
+    background: #0b428c;
+    padding: 35px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.docs-toolbar {
+    text-align: right;
+    margin: 20px 0;
+}
+
+#downloadPdf {
+    background: #0b428c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+#downloadPdf i {
+    margin-right: 6px;
+}
+
+#downloadPdf:hover {
+    background: #09356c;
+}
+
+
+.section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #0b428c;
+}
+
+.toc {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 35px;
+}
+
+.toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.toc li {
+    padding: 6px 0;
+}
+
+.toc a {
+    text-decoration: none;
+    color: #0b428c;
+    font-weight: 600;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+.img-box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.img-box img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.footer {
+    background: #0b428c;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    margin-top: 60px;
+}

@@ -1,3 +1,5 @@
+// 2025 © Harun Jaganjac
+
 const board = document.getElementById("board");
 const notify = document.getElementById("notify");
 

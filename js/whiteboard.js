@@ -1,3 +1,5 @@
+// 2025 © Harun Jaganjac
+
 const canvas = document.getElementById("board");
 const ctx = canvas.getContext("2d");
 

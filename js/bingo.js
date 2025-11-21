@@ -1,3 +1,5 @@
+// 2025 © Harun Jaganjac
+
 const notify = document.getElementById("notify");
 
 function alertMsg(msg) {

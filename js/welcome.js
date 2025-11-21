@@ -1,3 +1,5 @@
+// 2025 © Harun Jaganjac
+
 document.querySelectorAll(".card.page-link").forEach(card => {
     card.addEventListener("click", () => {
         const page = card.dataset.page;

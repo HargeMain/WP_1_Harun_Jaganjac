@@ -1,5 +1,5 @@
-
 // 2025 © Harun Jaganjac
+
 const frame = document.getElementById("mainFrame");
 const errorPanel = document.getElementById("errorPanel");
 
@@ -33,6 +33,12 @@ document.querySelectorAll(".nav-item").forEach(item => {
             loadPage("pages/contact.html");
             setActiveNav("contact");
         }
+
+        if (page === "documentation") {
+            loadPage("pages/documentation.html");
+            setActiveNav("documentation");
+        }
+
     });
 });
 
